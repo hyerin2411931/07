@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void f(void);
-int i;
-
+void sub(void);
  
 int main(int argc, char *argv[])
 {
-  for( i=0; i<5; i++)
-  {
-       f();
-  }
+  int i;
+  for(i=0; i<3; i++)
+      sub();
   system("PAUSE");	
   return 0;
 }
 
-void f(void)
+void sub(void)
 {
-     for(i=0;i<10;i++)  
-       printf("#");
+     int auto_count =0;
+     static int static_count=0;
+     auto_count++;
+     static_count++;
+     
+     printf("auto/_count =%d\n",auto_count);
+     printf("static_count =%d\n",static_count);
 }
-
-//#이 50개가 아니라 10개만 찍힘 => i 전역변수라서, 50개 하려면 지역변수로 설정해줘야됨 
