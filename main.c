@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int all_files;
+static int all_files;   //범위가 제한돼서 컴파일 오류 남 
 
 extern void sub();
  
