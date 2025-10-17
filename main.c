@@ -3,16 +3,14 @@
 
 int main(int argc, char *argv[])
 {
-  int flag=1;
-  int y;
-     //y 변수 범위 수정 
-  while(flag != 0)
+  int i;
+  
+  for (i=0;i<5;i++)
   {
-   
-   y=3;
-   flag =0;
-  }
-  y=4;
+      int temp =1; //원하는 값(1,2,3,4,5) 나오려면 static 넣거나 for문 바깥에 temp변수 설정 
+      printf("temp =%d\n", temp);
+      temp++;
+  } 
   system("PAUSE");	
   return 0;
 }
